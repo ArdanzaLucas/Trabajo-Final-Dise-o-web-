@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Quiénes somos: el equipo detrás de Free Arcade, la API que usamos y nuestras decisiones de diseño.">
+  <title>About · Free Arcade</title>
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Orbitron:wght@600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="contenedor header__barra">
+      <a class="logo" href="index.html">
+        <img class="logo__icono" src="img/logo.svg" alt="" width="34" height="34">
+        Free<span>Arcade</span>
+      </a>
+      <nav aria-label="Navegación principal">
+        <ul class="nav__lista">
+          <li><a class="nav__link" href="index.html">Home</a></li>
+          <li><a class="nav__link" href="contacto.html">Contacto</a></li>
+          <li><a class="nav__link" href="about.html" aria-current="page">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contenido -->
+  <main>
+    <div class="contenedor">
+
+      <section class="hero" aria-labelledby="titulo-hero">
+        <p class="hero__etiqueta">Select your player</p>
+        <h1 class="hero__titulo" id="titulo-hero">Nuestro <span>equipo</span></h1>
+        <p class="hero__texto">Somos estudiantes de 2.º año de la Tecnicatura Superior en Desarrollo de Software. Armamos Free Arcade para que cualquiera encuentre juegos gratuitos de calidad en un solo lugar.</p>
+      </section>
+
+      <!-- Equipo -->
+      <section aria-labelledby="titulo-equipo">
+        <h2 class="seccion-titulo" id="titulo-equipo">Integrantes y roles</h2>
+
+        <div class="equipo">
+          <article class="integrante">
+            <img class="integrante__foto" src="img/equipo/lucas-ardanza.jpg" alt="Foto de Lucas Ardanza" width="400" height="400">
+            <div class="integrante__datos">
+              <h3 class="integrante__nombre">Lucas Ardanza</h3>
+              <p class="integrante__rol">Maquetación HTML y CSS</p>
+              <ul class="integrante__tareas">
+                <li>Estructura semántica de las 3 páginas</li>
+                <li>Paleta, tipografía y grid responsive</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="integrante">
+            <img class="integrante__foto" src="img/equipo/leandro-medina.jpg" alt="Foto de Leandro Medina" width="400" height="400">
+            <div class="integrante__datos">
+              <h3 class="integrante__nombre">Leandro Medina</h3>
+              <p class="integrante__rol">Consumo de la API</p>
+              <ul class="integrante__tareas">
+                <li>Fetch y estados loading / success / error</li>
+                <li>Render dinámico de las cards</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="integrante">
+            <img class="integrante__foto" src="img/equipo/florencia-gomez.jpg" alt="Foto de Florencia Gómez" width="400" height="400">
+            <div class="integrante__datos">
+              <h3 class="integrante__nombre">Florencia Gómez</h3>
+              <p class="integrante__rol">Formulario y documentación</p>
+              <ul class="integrante__tareas">
+                <li>Validación del formulario con JavaScript</li>
+                <li>README y control del repositorio</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Proyecto -->
+      <section aria-labelledby="titulo-proyecto">
+        <h2 class="seccion-titulo" id="titulo-proyecto">El proyecto</h2>
+
+        <div class="info">
+          <article class="info__bloque">
+            <h3>🎮 Temática</h3>
+            <p>Elegimos los <strong>videojuegos free-to-play</strong> porque es un tema que nos gusta a todos y porque la API trae capturas reales de cada juego, ideales para cards visuales.</p>
+            <p>La idea es una “sala de arcade”: fondo oscuro con luces de neón, como las máquinas de los fichines.</p>
+          </article>
+
+          <article class="info__bloque">
+            <h3>🎨 Decisiones de diseño</h3>
+            <ul>
+              <li><strong>Paleta neón</strong>: cian y magenta sobre azul casi negro, el look típico gamer.</li>
+              <li><strong>Orbitron</strong> para títulos (estética retro-futurista) e <strong>Inter</strong> para el texto, que se lee bien en pantallas chicas.</li>
+              <li>Cards con <strong>bordes redondeados</strong>, etiqueta de género y un <strong>hover</strong> que las eleva y enciende un brillo cian.</li>
+              <li>Imágenes en <strong>16:9</strong>, el formato original de las capturas, para que no se deformen.</li>
+            </ul>
+            <ul class="paleta" aria-label="Paleta de colores">
+              <li><span class="paleta__color" style="background:#0d0b1e"></span>Fondo #0d0b1e</li>
+              <li><span class="paleta__color" style="background:#1a1633"></span>Cards #1a1633</li>
+              <li><span class="paleta__color" style="background:#00e5ff"></span>Cian #00e5ff</li>
+              <li><span class="paleta__color" style="background:#ff2e93"></span>Magenta #ff2e93</li>
+              <li><span class="paleta__color" style="background:#ffd23f"></span>Amarillo #ffd23f</li>
+            </ul>
+          </article>
+
+          <article class="info__bloque">
+            <h3>🌐 La API</h3>
+            <p>Usamos la <a href="https://www.freetogame.com/api-doc" target="_blank" rel="noopener">FreeToGame API</a>: pública, gratuita y sin registro ni API key.</p>
+            <ul>
+              <li>Endpoint: <code>https://www.freetogame.com/api/games</code></li>
+              <li>Devuelve el catálogo completo en <strong>un solo fetch</strong> (el JSON ya es el array).</li>
+              <li>Campos usados: <code>thumbnail</code>, <code>title</code>, <code>genre</code>, <code>platform</code>, <code>short_description</code>, <code>publisher</code>, <code>release_date</code>, <code>game_url</code>.</li>
+            </ul>
+          </article>
+
+          <article class="info__bloque info__bloque--ancho">
+            <h3>⚙️ Detalles técnicos</h3>
+            <ul>
+              <li><strong>HTML5 semántico</strong>: <code>header</code>, <code>nav</code>, <code>main</code>, <code>section</code>, <code>article</code>, <code>aside</code> y <code>footer</code>.</li>
+              <li><strong>CSS mobile first</strong> con variables en <code>:root</code> y 3 breakpoints: base 320px, 768px y 1024px. El grid de cards pasa de 1 a 2 y a 3 columnas.</li>
+              <li><strong>Fetch con async/await</strong> y <code>try/catch</code>: muestra un spinner mientras carga, las cards si sale bien y un mensaje con botón “Reintentar” si falla.</li>
+              <li>Las cards se crean con <code>document.createElement</code> y <code>textContent</code>. Primero se muestran 6 y el botón “Cargar más” agrega de a 6.</li>
+              <li><strong>Filtro por género</strong>: las opciones del <code>select</code> se arman a partir de los datos de la API y el filtrado se hace con <code>filter()</code> sobre la lista ya descargada, sin volver a llamar a la API.</li>
+              <li>El formulario se valida en el evento <code>submit</code>, con alerts específicos para cada error y <code>reset()</code> después de un envío correcto.</li>
+            </ul>
+            <pre><code>const respuesta = await fetch('https://www.freetogame.com/api/games');
+const juegos = await respuesta.json();   // el JSON ya es el array
+renderCards(juegos.slice(0, 6));          // mínimo 6 cards</code></pre>
+          </article>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="contenedor footer__contenido">
+      <p><strong>Integrantes:</strong> Lucas Ardanza · Leandro Medina · Florencia Gómez</p>
+      <p>🔗 <a href="https://github.com/ArdanzaLucas/Trabajo-Final-Dise-o-web-" target="_blank" rel="noopener">Repositorio en GitHub</a></p>
+      <p>Datos: <a href="https://www.freetogame.com/api-doc" target="_blank" rel="noopener">FreeToGame API</a> · Diseño Web 2026 · ISFT N° 194</p>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contacto de Free Arcade: dejanos tu consulta, sugerencia o reporte.">
+  <title>Contacto · Free Arcade</title>
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Orbitron:wght@600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="contenedor header__barra">
+      <a class="logo" href="index.html">
+        <img class="logo__icono" src="img/logo.svg" alt="" width="34" height="34">
+        Free<span>Arcade</span>
+      </a>
+      <nav aria-label="Navegación principal">
+        <ul class="nav__lista">
+          <li><a class="nav__link" href="index.html">Home</a></li>
+          <li><a class="nav__link" href="contacto.html" aria-current="page">Contacto</a></li>
+          <li><a class="nav__link" href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contenido -->
+  <main>
+    <div class="contenedor">
+
+      <section class="hero" aria-labelledby="titulo-hero">
+        <p class="hero__etiqueta">Insert coin</p>
+        <h1 class="hero__titulo" id="titulo-hero">Hablemos de <span>juegos</span></h1>
+        <p class="hero__texto">¿Querés recomendar un juego, contarnos una idea o avisarnos de un error? Completá el formulario y te respondemos.</p>
+      </section>
+
+      <div class="contacto">
+
+        <aside class="contacto__aside">
+          <img class="contacto__imagen" src="img/contacto-arcade.svg" alt="Ilustración de un control de videojuegos con luces de neón y el texto Press Start" width="420" height="420">
+          <p>Los campos marcados con <span class="obligatorio">*</span> son obligatorios. Si elegís que te respondamos por teléfono, también vamos a necesitar tu número.</p>
+        </aside>
+
+        <section aria-labelledby="titulo-form">
+          <h2 class="seccion-titulo" id="titulo-form">Formulario de contacto</h2>
+
+          <!-- novalidate: la validación la hace contacto.js -->
+          <form class="formulario" id="form-contacto" action="#" method="post" novalidate>
+
+            <div class="fila-campos">
+              <div class="campo">
+                <label for="nombre">Nombre <span class="obligatorio">*</span></label>
+                <input type="text" id="nombre" name="nombre" autocomplete="name" placeholder="Ej: Ana Pérez">
+              </div>
+
+              <div class="campo">
+                <label for="email">Email <span class="obligatorio">*</span></label>
+                <input type="email" id="email" name="email" autocomplete="email" placeholder="ana@mail.com">
+              </div>
+            </div>
+
+            <div class="fila-campos">
+              <div class="campo">
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono" name="telefono" autocomplete="tel" placeholder="11 2345 6789">
+                <span class="campo__ayuda">Obligatorio solo si elegís respuesta por teléfono.</span>
+              </div>
+
+              <div class="campo">
+                <label for="edad">Edad <span class="obligatorio">*</span></label>
+                <input type="number" id="edad" name="edad" min="13" max="99" placeholder="18">
+                <span class="campo__ayuda">Entre 13 y 99 años.</span>
+              </div>
+            </div>
+
+            <div class="campo">
+              <label for="motivo">Motivo <span class="obligatorio">*</span></label>
+              <select id="motivo" name="motivo">
+                <option value="">Elegí una opción…</option>
+                <option value="consulta">Consulta</option>
+                <option value="recomendacion">Recomendar un juego</option>
+                <option value="sugerencia">Sugerencia para el sitio</option>
+                <option value="error">Reporte de error</option>
+              </select>
+            </div>
+
+            <fieldset class="campo">
+              <legend>Preferencia de respuesta <span class="obligatorio">*</span></legend>
+              <div class="opciones">
+                <label class="opcion"><input type="radio" name="respuesta" value="email"> Email</label>
+                <label class="opcion"><input type="radio" name="respuesta" value="telefono"> Teléfono</label>
+              </div>
+            </fieldset>
+
+            <fieldset class="campo">
+              <legend>¿En qué plataformas jugás? (opcional)</legend>
+              <div class="opciones">
+                <label class="opcion"><input type="checkbox" name="plataformas" value="pc"> PC</label>
+                <label class="opcion"><input type="checkbox" name="plataformas" value="navegador"> Navegador</label>
+                <label class="opcion"><input type="checkbox" name="plataformas" value="consola"> Consola</label>
+                <label class="opcion"><input type="checkbox" name="plataformas" value="celular"> Celular</label>
+              </div>
+            </fieldset>
+
+            <div class="campo">
+              <label for="mensaje">Mensaje <span class="obligatorio">*</span></label>
+              <textarea id="mensaje" name="mensaje" placeholder="Contanos en qué te podemos ayudar (mínimo 20 caracteres)"></textarea>
+            </div>
+
+            <div class="campo">
+              <label class="opcion"><input type="checkbox" id="terminos" name="terminos"> Acepto que usen mis datos solo para responder esta consulta <span class="obligatorio">*</span></label>
+            </div>
+
+            <div class="formulario__acciones">
+              <button class="boton boton--magenta" type="submit">Enviar</button>
+              <button class="boton" type="reset">Limpiar</button>
+            </div>
+          </form>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="contenedor footer__contenido">
+      <p><strong>Integrantes:</strong> Lucas Ardanza · Leandro Medina · Florencia Gómez</p>
+      <p>🔗 <a href="https://github.com/ArdanzaLucas/Trabajo-Final-Dise-o-web-" target="_blank" rel="noopener">Repositorio en GitHub</a></p>
+      <p>Datos: <a href="https://www.freetogame.com/api-doc" target="_blank" rel="noopener">FreeToGame API</a> · Diseño Web 2026 · ISFT N° 194</p>
+    </div>
+  </footer>
+
+  <script src="js/contacto.js"></script>
+</body>
+</html>

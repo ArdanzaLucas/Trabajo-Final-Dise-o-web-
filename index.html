@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free Arcade: catálogo de videojuegos gratuitos consumido desde la FreeToGame API.">
+  <title>Free Arcade · Juegos gratis</title>
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Orbitron:wght@600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="contenedor header__barra">
+      <a class="logo" href="index.html">
+        <img class="logo__icono" src="img/logo.svg" alt="" width="34" height="34">
+        Free<span>Arcade</span>
+      </a>
+      <nav aria-label="Navegación principal">
+        <ul class="nav__lista">
+          <li><a class="nav__link" href="index.html" aria-current="page">Home</a></li>
+          <li><a class="nav__link" href="contacto.html">Contacto</a></li>
+          <li><a class="nav__link" href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contenido -->
+  <main>
+    <div class="contenedor">
+
+      <section class="hero" aria-labelledby="titulo-hero">
+        <p class="hero__etiqueta">Free to play · sin pagar un peso</p>
+        <h1 class="hero__titulo" id="titulo-hero">Elegí tu próximo <span>juego gratis</span></h1>
+        <p class="hero__texto">Una selección de videojuegos free-to-play para PC y navegador, traídos en vivo desde la FreeToGame API. Pasá el mouse por las cards y hacé clic para ir a jugar.</p>
+      </section>
+
+      <section aria-labelledby="titulo-catalogo">
+        <h2 class="seccion-titulo" id="titulo-catalogo">Catálogo</h2>
+
+        <!-- Cargando -->
+        <div class="estado" id="estado-cargando" role="status" aria-live="polite">
+          <div class="spinner" aria-hidden="true"></div>
+          <p>Cargando juegos desde la API…</p>
+        </div>
+
+        <!-- Error -->
+        <div class="estado estado--error" id="estado-error" role="alert" hidden>
+          <span class="estado__icono" aria-hidden="true">👾</span>
+          <h3 class="estado__titulo">Game over: no pudimos cargar los juegos</h3>
+          <p id="mensaje-error">Revisá tu conexión e intentá de nuevo.</p>
+          <button class="boton" type="button" id="boton-reintentar">Reintentar</button>
+        </div>
+
+        <!-- Filtro por género (las opciones las arma home.js) -->
+        <div class="filtros" id="filtros" hidden>
+          <label class="filtros__label" for="filtro-genero">Filtrar por género</label>
+          <select class="filtros__select" id="filtro-genero">
+            <option value="todos">Todos</option>
+          </select>
+        </div>
+
+        <!-- Cards (las arma home.js) -->
+        <p class="contador" id="contador" aria-live="polite" hidden></p>
+        <div class="cards" id="cards"></div>
+
+        <div class="mas-juegos">
+          <button class="boton boton--magenta" type="button" id="boton-mas" hidden>Cargar 6 juegos más</button>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="contenedor footer__contenido">
+      <p><strong>Integrantes:</strong> Lucas Ardanza · Leandro Medina · Florencia Gómez</p>
+      <p>🔗 <a href="https://github.com/ArdanzaLucas/Trabajo-Final-Dise-o-web-" target="_blank" rel="noopener">Repositorio en GitHub</a></p>
+      <p>Datos: <a href="https://www.freetogame.com/api-doc" target="_blank" rel="noopener">FreeToGame API</a> · Diseño Web 2026 · ISFT N° 194</p>
+    </div>
+  </footer>
+
+  <script src="js/home.js"></script>
+</body>
+</html>
